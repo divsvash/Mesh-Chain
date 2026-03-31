@@ -27,10 +27,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} font-sans antialiased`}>
+      <body
+        suppressHydrationWarning
+        className={`${inter.variable} font-sans antialiased`}
+      >
         {children}
-        <Toaster 
-          position="top-center" 
+        <Toaster
+          position="top-center"
           toastOptions={{
             style: {
               background: '#12121A',
@@ -42,5 +45,5 @@ export default function RootLayout({
         <Analytics />
       </body>
     </html>
-  )
+  );
 }
